@@ -575,7 +575,7 @@ class CommandNavigateAutocompleteDown extends BaseCommand {
 @RegisterAction
 class CommandNavigateAutocompleteUp extends BaseCommand {
   modes = [Mode.Insert];
-  keys = ['<C-p>'];
+  keys = [['<C-p>'], ['<C-k>']];
 
   public async exec(position: Position, vimState: VimState): Promise<void> {
     /* if we're in a multi cursor state, we check to see if the current active text selection
