@@ -1668,7 +1668,7 @@ async function selectLastSearchWord(vimState: VimState, direction: SearchDirecti
 @RegisterAction
 class CommandSelectNextLastSearchWord extends BaseCommand {
   modes = [Mode.Normal, Mode.Visual, Mode.VisualBlock];
-  keys = ['g', 'n'];
+  keys = ['g', 'N'];
 
   public async exec(position: Position, vimState: VimState): Promise<void> {
     await selectLastSearchWord(vimState, SearchDirection.Forward);
@@ -1678,7 +1678,7 @@ class CommandSelectNextLastSearchWord extends BaseCommand {
 @RegisterAction
 class CommandSelectPreviousLastSearchWord extends BaseCommand {
   modes = [Mode.Normal, Mode.Visual, Mode.VisualBlock];
-  keys = ['g', 'N'];
+  keys = ['g', 'n'];
 
   public async exec(position: Position, vimState: VimState): Promise<void> {
     await selectLastSearchWord(vimState, SearchDirection.Backward);
